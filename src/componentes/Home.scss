@@ -5,6 +5,9 @@
     background-position: center;
     height: 300px;
     background-size: cover;
+    @media (min-width:1024px) {
+      height: 400px;
+    }
   }
   .button{
       width: 100%;
@@ -13,5 +16,10 @@
       align-items: center;
       justify-content: center;
       background-color: #202020;
+      @media (min-width:1024px) {
+        height: 202px;
+      }
+
   }
+  
 }

@@ -20,7 +20,6 @@ const NavBar = () => {
                 <div className="ancora">
                 <Link onClick={FecharMenu} to='/'> Home</Link>
                 <Link onClick={FecharMenu} to="/cadastro"> Cadastro</Link>
-                <Link onClick={FecharMenu} to="/">Login</Link>
                 <Link onClick={FecharMenu} to="/produto">Produtos</Link>
                 </div>
                 <div onClick={AbrirMenu} id="menu-hamburguer">
