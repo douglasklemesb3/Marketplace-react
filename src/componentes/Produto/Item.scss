@@ -1,4 +1,24 @@
 .Item{
-    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2{
+        font-size: 20pt;
+        
+    }
+    img{
+        width: 280px;
+    }
+    div{
 
+        Button{
+            width: 50px;
+            border-radius: 10px;
+        }
+    }
+    Button{
+        margin-top: 10px;
+
+    }
 }
