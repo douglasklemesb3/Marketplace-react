@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Input from '../Input';
 import Button from '../Button/Button';
+import './Cadastro.scss';
 
 const Cadastro = () => {
         const [nome, setNome] = useState("");
@@ -12,7 +13,7 @@ const Cadastro = () => {
         const [mensagem, setMensagem] = useState("");
 
 
-        const respota = texto =>{
+        const resposta = texto =>{
             setMensagem(texto);
             setTimeout(()=>{
                 setMensagem("");
@@ -23,7 +24,7 @@ const Cadastro = () => {
             setEmail("");
             setConfirmEmail("");
             setSenha("");
-            respota("Cadastrado feito com sucesso!! ")
+            resposta("Cadastrado feito com sucesso!! ")
         }
         const handleSubmit = (e) => {
             e.preventDefault();
@@ -41,34 +42,34 @@ const Cadastro = () => {
 
             }
             else{
-              respota("Os email estao errados!!")
+              resposta("Os email estao errados!!")
             }
         
         };
 
-        useEffect(()=>{
-            fetch(`https://rickandmortyapi.com/api/character/${numb}`,{
-                method: "GET"
-            }).then(result=>{
-                return result.json()
-            }).then(data =>{
-                console.log(data)
-            }).catch(()=>{
-                console.error("errooooo,internet ruim ou vocễ que é")
-            })
-        }, [numb])
+        // useEffect(()=>{
+        //     fetch(`https://rickandmortyapi.com/api/character/${numb}`,{
+        //         method: "GET"
+        //     }).then(result=>{
+        //         return result.json()
+        //     }).then(data =>{
+        //         console.log(data)
+        //     }).catch(()=>{
+        //         console.error("errooooo,internet ruim ou vocễ que é")
+        //     })
+        // }, [numb])
 
-        const incrementar =() =>{
-            setNumb( numb +1)
-        }
+        // // const incrementar =() =>{
+        // //     setNumb( numb +1)
+        // // }
 
 
         
         return (
-            <div>
+            <div className="Cadastro">
             <h1> Faça seu Cadastro</h1>
-            <p> {mensagem}</p>
             <form onSubmit={handleSubmit}>
+            <p> {mensagem}</p>
                 <Input
                     value={nome}
                     type="text"
@@ -101,7 +102,10 @@ const Cadastro = () => {
                     atualizarState={setSenha}
                     obrigatorio
                     />
-                <button> Cadastrar</button>
+                 
+                <Button> Cadastro </Button>
+                <Button> Login </Button>
+               
             </form>
         </div>
     );

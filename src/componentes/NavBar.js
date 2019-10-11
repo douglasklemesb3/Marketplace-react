@@ -19,9 +19,9 @@ const NavBar = () => {
             <nav>
                 <div className="ancora">
                 <Link onClick={FecharMenu} to='/'> Home</Link>
-                <Link onClick={FecharMenu} to="/"> Pagamento</Link>
-                <Link onClick={FecharMenu} to="/">Carrinho</Link>
-                <Link onClick={FecharMenu} to="/">Produto</Link>
+                <Link onClick={FecharMenu} to="/cadastro"> Cadastro</Link>
+                <Link onClick={FecharMenu} to="/">Login</Link>
+                <Link onClick={FecharMenu} to="/produto">Produtos</Link>
                 </div>
                 <div onClick={AbrirMenu} id="menu-hamburguer">
                     <span className={`${menuAtivo ? "virarX1" : ""}`}></span>
@@ -31,9 +31,9 @@ const NavBar = () => {
             </nav>
             <section className={`menu ${menuAtivo ? "ativo" : ""}`}>
                 <Link onClick={FecharMenu} to='/'> Home</Link>
-                <Link onClick={FecharMenu} to="/pagamento"> Pagamento</Link>
-                <Link onClick={FecharMenu} to="/carrinho">Carrinho</Link>
-                <Link onClick={FecharMenu} to="/produto">Produto</Link>
+                <Link onClick={FecharMenu} to="/cadastro"> Cadastro</Link>
+                <Link onClick={FecharMenu} to="/">Login</Link>
+                <Link onClick={FecharMenu} to="/produto">Produtos</Link>
             </section>
         </div>
     );
