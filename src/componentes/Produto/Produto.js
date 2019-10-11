@@ -15,18 +15,20 @@ const Produto = () => {
     // const batata = () => {
     //     setProdutos({nome: "x", price: "100", qnt: 12})
     // }
+    const incrementar = () => {
+
+    }
     return (
         <div className="Produto">
-        <Item titulo="Rey" imagem={Rey} descricao="Boneco star wars ep VII" preco="300,00"/>
-        <Item titulo="Han Solo" imagem={Solo} descricao="Boneco star wars ep IV" preco="300,00"/>
-        <Item titulo="Capitão America" imagem={america} descricao="Boneco Marvel comics" preco="600,00"/>
-        <Item titulo="Obi-wan" imagem={obiwan} descricao="Boneco star wars ep III" preco="300,00"/>
-        <Item titulo="Batman" imagem={batman} descricao="Boneco DC comics" preco="150,00"/>
-        <Item titulo="Seu Madruga" imagem={madruga} descricao="Boneco turma do Chaves" preco="1.300,00"/>
+        <Item titulo="Rey" id="1" imagem={Rey} descricao="Boneco star wars ep VII" preco="300"/>
+        <Item titulo="Han Solo" id="2" imagem={Solo} descricao="Boneco star wars ep IV" preco="300"/>
+        <Item titulo="Capitão America" id="3" imagem={america} descricao="Boneco Marvel comics" preco="600"/>
+        <Item titulo="Obi-wan" id="4" imagem={obiwan} descricao="Boneco star wars ep III" preco="300"/>
+        <Item titulo="Batman" id="5" imagem={batman} descricao="Boneco DC comics" preco="150"/>
+        <Item titulo="Seu Madruga" id="6" imagem={madruga} descricao="Boneco turma do Chaves" preco="1300"/>
         <div>
         <Button id="botao">Finalizar Compra</Button>
         </div>
-
         </div>
     )
 }
