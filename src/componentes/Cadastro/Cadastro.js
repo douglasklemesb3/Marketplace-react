@@ -29,6 +29,7 @@ const Cadastro = () => {
         const handleSubmit = (e) => {
             e.preventDefault();
             if(email === confirmEmail){
+
                 const payload = {
                     name: nome,
                     email: email,
@@ -40,12 +41,14 @@ const Cadastro = () => {
                 
                 handleClearInput()
 
+                window.open("http://localhost:3000/produto");
             }
             else{
               resposta("Os email estao errados!!")
             }
         
         };
+       
 
         // useEffect(()=>{
         //     fetch(`https://rickandmortyapi.com/api/character/${numb}`,{
@@ -103,8 +106,8 @@ const Cadastro = () => {
                     obrigatorio
                     />
                  
-                <Button> Cadastro </Button>
-                <Button> Login </Button>
+                <Button> Cadastrar </Button>
+                {/* <Button> Login </Button> */}
                
             </form>
         </div>
